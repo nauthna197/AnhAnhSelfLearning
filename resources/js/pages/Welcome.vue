@@ -1,4 +1,4 @@
-<template>
+    <template>
     <div>I'm welcome pages</div>
 </template>
 

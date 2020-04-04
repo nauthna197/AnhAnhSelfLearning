@@ -2,9 +2,17 @@
 $body-bg: #f8fafc;
 
 // Typography
-$font-family-sans-serif: 'Nunito', sans-serif;
-$font-size-base: 0.9rem;
+$font-root: 14px;
 $line-height-base: 1.6;
+$font-family-root: 'Arial', sans-serif;
+$font-family-roboto: 'Roboto-Regular', sans-serif;
+$font-family-roboto-bold: 'Roboto-Bold', sans-serif;
+$font-family-roboto-italic: 'Roboto-Italic', sans-serif;
+$font-family-roboto-semibold: 'Roboto-Light', sans-serif;
+$font-family-roboto-medium: 'Roboto-Medium', sans-serif;
+$color-grey-dark: #333333;
+$text-default: $color-grey-dark;
+
 
 // Colors
 $blue: #3490dc;
@@ -14,6 +22,12 @@ $pink: #f66d9b;
 $red: #e3342f;
 $orange: #f6993f;
 $yellow: #ffed4a;
-$green: #38c172;
+$green: #2DAC91;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
+$white: rgb(255,255,255);
+$bgc-hover:#3b6978;
+$color-alabaster: #F8F8F8;
+$color-step-two: #dfe3e6;
+
+
