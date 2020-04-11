@@ -10,11 +10,16 @@ window.Vue = require('vue');
 
 import VueRouter from 'vue-router'
 import routes from "./routes.js";
-
+import VueBroadCast from "./VueBroadcast";
+import CKEditor from '@ckeditor/ckeditor5-vue';
+import Toasted from 'vue-toasted';
+import _ from 'lodash';
+    
+    
 
 const router = new VueRouter({
-    mode: 'history',
-    routes
+    mode: 'history',    
+    routes  
 })
 
 /**
@@ -30,15 +35,18 @@ const router = new VueRouter({
 
 Vue.component('app',require('./App.vue').default);
 
-
 Vue.use(VueRouter);
+Vue.use(VueBroadCast);
+Vue.use(CKEditor)
+Vue.use(Toasted,{position:'bottom-right',duration:5000,fitToScreen:true})
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-const app = new Vue({
+window.app = new Vue({
     el: '#app',
     router
 });

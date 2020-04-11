@@ -17,10 +17,9 @@ mix.js("resources/js/app.js", "public/js").sass(
 );
 
 mix.webpackConfig({
-    plugins: [],
     resolve: {
         alias: {
-         '@': path.resolve('resources/assets/sass')
+         'requestfactory' : path.resolve(__dirname,'./resources/js/lib/RequestFactory')
         }
     }
 });
