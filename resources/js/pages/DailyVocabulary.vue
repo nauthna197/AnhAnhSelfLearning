@@ -21,11 +21,11 @@
           <div slot="body" class="form-add-word">
             <div class="row">
               <div class="form-group col-md-6">
-                <label>Word</label>
+                <label>Word<span class="text-danger">*</span></label>
                 <input type="text" v-model="formDataAddWord.name"  class="form-control">
               </div>
               <div class="form-group col-md-6">
-                <label for="exampleInputEmail1">Type</label>
+                <label for="exampleInputEmail1">Type<span class="text-danger">*</span></label>
                 <select class="form-control" v-model="formDataAddWord.type">
                   <option value="">Select type of word</option>
                   <option value="1">Verb</option>
@@ -36,7 +36,7 @@
             </div>
             <div class="row">
               <div class="form-group col-md">
-                <label>Mean</label>
+                <label>Mean<span class="text-danger">*</span></label>
                 <input type="text" v-model="formDataAddWord.mean" class="form-control">
               </div>
             </div>
@@ -91,14 +91,21 @@ export default {
               background:"rgb(0,112,192)"
             },
             callback:()=>{
+              const {name,type,mean} = this.formDataAddWord;
+
+              if(name==='' || type==='' || mean===''){
+                this.$toasted.error('Important field is required!');
+                return;
+              }
               rf.getRequest('VocabularyRequest').create(this.formDataAddWord).then((data)=>{
                 this.$toasted.success(data);
+                this.fetchData();
+                this.resetFormData();
+                CommonModal.hide("AddWordButton");
               }).catch((error)=>{
                 console.log(error);
                 this.$toasted.error('Something went wrong!');
               });
-              this.resetFormData();
-              CommonModal.hide("AddWordButton");
             }
           },
           {
@@ -122,14 +129,17 @@ export default {
         type:"",
         mean:"",
       };
+    },
+    fetchData:function(){
+      rf.getRequest('VocabularyRequest').getListVoca({}).then((response)=>{
+        this.listVocaByDay = response.data;
+      }).catch((error)=>{
+        console.log(error);
+      });
     }
   },
   mounted(){
-    rf.getRequest('VocabularyRequest').getListVoca({}).then((response)=>{
-      this.listVocaByDay = response.data;
-    }).catch((error)=>{
-      console.log(error);
-    });
+    this.fetchData();
   }
 }
 </script>
@@ -156,9 +166,12 @@ export default {
     }
   }
 }
+.text-danger{
+  margin-left: 3px;
+}
 .ck-content { height:200px; }
 .content{
-  height: 100%;
+  height: 575px;
   overflow: auto;
 }
 

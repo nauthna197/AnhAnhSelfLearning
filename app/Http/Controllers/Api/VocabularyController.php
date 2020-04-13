@@ -22,7 +22,7 @@ class VocabularyController extends Controller
         $data = Vocabulary::all();
         $dataGrouped = $data->groupBy(function($item,$key){
             return $item->created_at->format('d-m-Y');
-        })->reverse();
+        })->sortByDesc('created_at');
         return ['status' => 1, 'data' => $dataGrouped];
     }
 }

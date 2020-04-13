@@ -18,7 +18,7 @@ class CreateVocabulariesTable extends Migration
             $table->string('name');
             $table->string('mean');
             $table->tinyInteger('type');
-            $table->text('desctipion')->nullable();
+            $table->text('description')->nullable();
             $table->string('synonym')->nullable();
             $table->timestamps();
         });

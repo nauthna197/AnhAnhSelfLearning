@@ -2184,17 +2184,30 @@ __webpack_require__.r(__webpack_exports__);
             background: "rgb(0,112,192)"
           },
           callback: function callback() {
+            var _this$formDataAddWord = _this.formDataAddWord,
+                name = _this$formDataAddWord.name,
+                type = _this$formDataAddWord.type,
+                mean = _this$formDataAddWord.mean;
+
+            if (name === '' || type === '' || mean === '') {
+              _this.$toasted.error('Important field is required!');
+
+              return;
+            }
+
             _lib_RequestFactory__WEBPACK_IMPORTED_MODULE_2__["default"].getRequest('VocabularyRequest').create(_this.formDataAddWord).then(function (data) {
               _this.$toasted.success(data);
+
+              _this.fetchData();
+
+              _this.resetFormData();
+
+              CommonModal.hide("AddWordButton");
             })["catch"](function (error) {
               console.log(error);
 
               _this.$toasted.error('Something went wrong!');
             });
-
-            _this.resetFormData();
-
-            CommonModal.hide("AddWordButton");
           }
         }, {
           label: "Cancel",
@@ -2217,16 +2230,19 @@ __webpack_require__.r(__webpack_exports__);
         type: "",
         mean: ""
       };
+    },
+    fetchData: function fetchData() {
+      var _this2 = this;
+
+      _lib_RequestFactory__WEBPACK_IMPORTED_MODULE_2__["default"].getRequest('VocabularyRequest').getListVoca({}).then(function (response) {
+        _this2.listVocaByDay = response.data;
+      })["catch"](function (error) {
+        console.log(error);
+      });
     }
   },
   mounted: function mounted() {
-    var _this2 = this;
-
-    _lib_RequestFactory__WEBPACK_IMPORTED_MODULE_2__["default"].getRequest('VocabularyRequest').getListVoca({}).then(function (response) {
-      _this2.listVocaByDay = response.data;
-    })["catch"](function (error) {
-      console.log(error);
-    });
+    this.fetchData();
   }
 });
 
@@ -6934,7 +6950,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".daily-vocabulary {\n  padding: 10px;\n}\n.daily-vocabulary .list-item-wrapper .title-group-list {\n  text-align: center;\n}\n.daily-vocabulary .list-item-wrapper li {\n  margin-left: 100px;\n  text-transform: capitalize;\n}\n.daily-vocabulary .list-item-wrapper li span {\n  cursor: pointer;\n}\n.daily-vocabulary .list-item-wrapper li:hover {\n  background-color: #e8f9e9;\n}\n.ck-content {\n  height: 200px;\n}\n.content {\n  height: 100%;\n  overflow: auto;\n}", ""]);
+exports.push([module.i, ".daily-vocabulary {\n  padding: 10px;\n}\n.daily-vocabulary .list-item-wrapper .title-group-list {\n  text-align: center;\n}\n.daily-vocabulary .list-item-wrapper li {\n  margin-left: 100px;\n  text-transform: capitalize;\n}\n.daily-vocabulary .list-item-wrapper li span {\n  cursor: pointer;\n}\n.daily-vocabulary .list-item-wrapper li:hover {\n  background-color: #e8f9e9;\n}\n.text-danger {\n  margin-left: 3px;\n}\n.ck-content {\n  height: 200px;\n}\n.content {\n  height: 575px;\n  overflow: auto;\n}", ""]);
 
 // exports
 
@@ -57075,7 +57091,10 @@ var render = function() {
           [
             _c("div", { staticClass: "row" }, [
               _c("div", { staticClass: "form-group col-md-6" }, [
-                _c("label", [_vm._v("Word")]),
+                _c("label", [
+                  _vm._v("Word"),
+                  _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
+                ]),
                 _vm._v(" "),
                 _c("input", {
                   directives: [
@@ -57102,7 +57121,8 @@ var render = function() {
               _vm._v(" "),
               _c("div", { staticClass: "form-group col-md-6" }, [
                 _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-                  _vm._v("Type")
+                  _vm._v("Type"),
+                  _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
                 ]),
                 _vm._v(" "),
                 _c(
@@ -57156,7 +57176,10 @@ var render = function() {
             _vm._v(" "),
             _c("div", { staticClass: "row" }, [
               _c("div", { staticClass: "form-group col-md" }, [
-                _c("label", [_vm._v("Mean")]),
+                _c("label", [
+                  _vm._v("Mean"),
+                  _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
+                ]),
                 _vm._v(" "),
                 _c("input", {
                   directives: [
