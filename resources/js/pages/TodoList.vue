@@ -1,4 +1,5 @@
 <template>
+<div class="page-container">
   <div class="todoList">
     <div class="header">
       <h3>My day</h3>
@@ -24,6 +25,7 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 
 <script>

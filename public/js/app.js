@@ -1978,6 +1978,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -2150,6 +2156,26 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -2166,10 +2192,8 @@ __webpack_require__.r(__webpack_exports__);
         type: "",
         mean: ""
       },
-      listVocaByDay: {
-        a: '1',
-        b: '3'
-      }
+      listVocaByDay: {},
+      selectedWord: ""
     };
   },
   methods: {
@@ -2239,6 +2263,10 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (error) {
         console.log(error);
       });
+    },
+    onSelectWord: function onSelectWord(word) {
+      this.selectedWord = word;
+      console.log(word);
     }
   },
   mounted: function mounted() {
@@ -2280,6 +2308,8 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
 //
 //
 //
@@ -6912,7 +6942,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, ".navbar {\n  background: #2DAC91;\n  transition: all 0.6s;\n  -webkit-backface-visibility: hidden;\n          backface-visibility: hidden;\n}\n.navbar .navbar-wrapper {\n  width: 100%;\n  margin-left: 0;\n}\n.navbar .navbar-wrapper #navbarNav ul li {\n  border-radius: 3px;\n  padding: 10px;\n}\n.navbar .navbar-wrapper #navbarNav ul li a {\n  font-family: \"Roboto-Bold\", sans-serif;\n  color: white;\n  font-weight: bold;\n  padding: 5px;\n}\n.navbar .navbar-wrapper #navbarNav ul li a:hover {\n  text-decoration: none;\n}\n.navbar .navbar-wrapper #navbarNav ul li:hover {\n  background-color: #3b6978;\n}\n.page-container {\n  padding: 40px 15px;\n  margin: auto;\n  height: 100%;\n  background-color: #fff;\n  margin: 30px;\n}\n.navbar.navbar-no-bg {\n  background: #2DAC91;\n  background: #2DAC91;\n}", ""]);
+exports.push([module.i, ".navbar {\n  background: #2DAC91;\n  transition: all 0.6s;\n  -webkit-backface-visibility: hidden;\n          backface-visibility: hidden;\n}\n.navbar img {\n  width: 50px;\n  height: 50px;\n}\n.navbar .navbar-wrapper {\n  width: 100%;\n  margin-left: 0;\n}\n.navbar .navbar-wrapper #navbarNav ul li {\n  border-radius: 3px;\n  padding: 10px;\n}\n.navbar .navbar-wrapper #navbarNav ul li a {\n  font-family: \"Roboto-Bold\", sans-serif;\n  color: white;\n  font-weight: bold;\n  padding: 5px;\n}\n.navbar .navbar-wrapper #navbarNav ul li a:hover {\n  text-decoration: none;\n}\n.navbar .navbar-wrapper #navbarNav ul li:hover {\n  background-color: #3b6978;\n}\n.navbar .right-nav {\n  padding-right: 10px;\n  color: #fff;\n  font-weight: bold;\n  font-size: 15px;\n}\n.navbar .right-nav span {\n  padding: 10px;\n  border-radius: 5px;\n  background-color: #499b82;\n}\n.navbar .right-nav i {\n  padding: 10px;\n  border-radius: 5px;\n  cursor: pointer;\n}\n.navbar .right-nav i:hover {\n  background-color: #499b82;\n}\n.page-container {\n  padding: 40px 15px;\n  margin: auto;\n  height: 100%;\n  background-color: #fff;\n  margin: 30px;\n}\n.navbar.navbar-no-bg {\n  background: #2DAC91;\n  background: #2DAC91;\n}", ""]);
 
 // exports
 
@@ -6950,7 +6980,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".daily-vocabulary {\n  padding: 10px;\n}\n.daily-vocabulary .list-item-wrapper .title-group-list {\n  text-align: center;\n}\n.daily-vocabulary .list-item-wrapper li {\n  margin-left: 100px;\n  text-transform: capitalize;\n}\n.daily-vocabulary .list-item-wrapper li span {\n  cursor: pointer;\n}\n.daily-vocabulary .list-item-wrapper li:hover {\n  background-color: #e8f9e9;\n}\n.text-danger {\n  margin-left: 3px;\n}\n.ck-content {\n  height: 200px;\n}\n.content {\n  height: 575px;\n  overflow: auto;\n}", ""]);
+exports.push([module.i, ".container-wrapper {\n  margin: 0;\n  padding: 30px;\n}\n.container-wrapper .desciption-vocabulary {\n  font-size: 16px;\n}\n.container-wrapper .desciption-vocabulary .content-description {\n  margin: 0;\n}\n.container-wrapper .desciption-vocabulary .content-description .description-word {\n  font-size: 30px;\n}\n.container-wrapper .desciption-vocabulary .content-description .mean-word {\n  margin-top: 10px;\n  margin-bottom: 10px;\n  color: #3490dc;\n}\n.container-wrapper > div {\n  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);\n  margin: 10px;\n  border-radius: 3px;\n  background-color: #fff;\n  padding: 20px;\n}\n.container-wrapper > div .title {\n  font-size: 40px;\n  font-weight: bold;\n}\n.container-wrapper > div .line {\n  border-bottom: solid 1px #919191;\n}\n.fa-window-close {\n  font-size: 20px;\n  cursor: pointer;\n}\n.daily-vocabulary .list-item-wrapper .title-group-list {\n  text-align: center;\n}\n.daily-vocabulary .list-item-wrapper li {\n  text-transform: capitalize;\n}\n.daily-vocabulary .list-item-wrapper li span {\n  cursor: pointer;\n}\n.daily-vocabulary .list-item-wrapper li:hover {\n  background-color: #e8f9e9;\n}\n.text-danger {\n  margin-left: 3px;\n}\n.ck-content {\n  height: 200px;\n}\n.content {\n  height: 575px;\n  overflow: auto;\n}", ""]);
 
 // exports
 
@@ -56876,52 +56906,61 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "page-wrapper" }, [
-    _c(
-      "nav",
-      { staticClass: "navbar navbar-dark navbar-expand-md navbar-no-bg" },
-      [
-        _c("div", { staticClass: "navbar-wrapper container" }, [
-          _vm._m(0),
+  return _c(
+    "div",
+    { staticClass: "page-wrapper" },
+    [
+      _c(
+        "nav",
+        { staticClass: "navbar navbar-dark navbar-expand-md navbar-no-bg" },
+        [
+          _c("div", { staticClass: "navbar-wrapper container" }, [
+            _vm._m(0),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "collapse navbar-collapse",
+                attrs: { id: "navbarNav" }
+              },
+              [
+                _c("ul", { staticClass: "navbar-nav" }, [
+                  _c(
+                    "li",
+                    { staticClass: "nav-item" },
+                    [
+                      _c("router-link", { attrs: { to: "/todo-list" } }, [
+                        _vm._v("Todo List")
+                      ])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "li",
+                    { staticClass: "nav-item" },
+                    [
+                      _c(
+                        "router-link",
+                        { attrs: { to: "/daily-vocabulary" } },
+                        [_vm._v("Daily Vocabulary")]
+                      )
+                    ],
+                    1
+                  )
+                ])
+              ]
+            )
+          ]),
           _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "collapse navbar-collapse",
-              attrs: { id: "navbarNav" }
-            },
-            [
-              _c("ul", { staticClass: "navbar-nav" }, [
-                _c(
-                  "li",
-                  { staticClass: "nav-item" },
-                  [
-                    _c("router-link", { attrs: { to: "/todo-list" } }, [
-                      _vm._v("Todo List")
-                    ])
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  { staticClass: "nav-item" },
-                  [
-                    _c("router-link", { attrs: { to: "/daily-vocabulary" } }, [
-                      _vm._v("Daily Vocabulary")
-                    ])
-                  ],
-                  1
-                )
-              ])
-            ]
-          )
-        ])
-      ]
-    ),
-    _vm._v(" "),
-    _c("div", { staticClass: "page-container" }, [_c("router-view")], 1)
-  ])
+          _vm._m(1)
+        ]
+      ),
+      _vm._v(" "),
+      _c("router-view")
+    ],
+    1
+  )
 }
 var staticRenderFns = [
   function() {
@@ -56930,8 +56969,18 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "nav-brand" }, [
       _c("a", { staticClass: "navbar-brand", attrs: { href: "index.html" } }, [
-        _vm._v("AnhAnhEng")
+        _c("img", { attrs: { src: "images/logo.png" } })
       ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "ml-auto right-nav" }, [
+      _c("span", [_vm._v("NguyenTuanAnh@gmail.com")]),
+      _vm._v(" "),
+      _c("i", { staticClass: "fas fa-list" })
     ])
   }
 ]
@@ -57034,219 +57083,274 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "daily-vocabulary" },
-    [
-      _c("div", { staticClass: "header d-flex" }, [
-        _c("h3", { staticClass: "mr-4" }, [_vm._v("My Vocabulary")]),
+  return _c("div", { staticClass: "container-wrapper row" }, [
+    _c(
+      "div",
+      { staticClass: "daily-vocabulary col" },
+      [
+        _c("div", { staticClass: "header d-flex" }, [
+          _c("h3", { staticClass: "mr-4 title" }, [_vm._v("My Vocabulary")]),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn float-right btn-success",
+              on: { click: _vm.onClickAddButton }
+            },
+            [
+              _c("i", { staticClass: "fas fa-plus" }),
+              _vm._v("\n        Add word\n      ")
+            ]
+          )
+        ]),
         _vm._v(" "),
         _c(
-          "button",
-          {
-            staticClass: "btn float-right btn-success",
-            on: { click: _vm.onClickAddButton }
-          },
-          [
-            _c("i", { staticClass: "fas fa-plus" }),
-            _vm._v("\n      Add word\n    ")
-          ]
-        )
-      ]),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "content mt-5" },
-        _vm._l(_vm.listVocaByDay, function(value, key) {
-          return _c("div", { key: key, staticClass: "list-item-wrapper" }, [
-            _c("h5", { staticClass: "title-group-list" }, [
-              _vm._v(_vm._s(key))
-            ]),
-            _vm._v(" "),
-            _c(
-              "ul",
-              { staticClass: "list-group list-group-flush" },
-              _vm._l(value, function(voca) {
-                return _c(
-                  "li",
-                  { key: voca.id, staticClass: "list-group-item" },
-                  [_c("span", [_vm._v(_vm._s(voca.name))])]
-                )
-              }),
-              0
-            )
-          ])
-        }),
-        0
-      ),
-      _vm._v(" "),
-      _c("modal", { attrs: { width: "800", name: "AddWordButton" } }, [
-        _c(
           "div",
-          {
-            staticClass: "form-add-word",
-            attrs: { slot: "body" },
-            slot: "body"
-          },
-          [
-            _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "form-group col-md-6" }, [
-                _c("label", [
-                  _vm._v("Word"),
-                  _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
-                ]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.formDataAddWord.name,
-                      expression: "formDataAddWord.name"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: { type: "text" },
-                  domProps: { value: _vm.formDataAddWord.name },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.formDataAddWord, "name", $event.target.value)
-                    }
-                  }
-                })
+          { staticClass: "content mt-5" },
+          _vm._l(_vm.listVocaByDay, function(value, key) {
+            return _c("div", { key: key, staticClass: "list-item-wrapper" }, [
+              _c("h5", { staticClass: "title-group-list" }, [
+                _vm._v(_vm._s(key))
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "form-group col-md-6" }, [
-                _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-                  _vm._v("Type"),
-                  _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
-                ]),
-                _vm._v(" "),
-                _c(
-                  "select",
-                  {
+              _c(
+                "ul",
+                { staticClass: "list-group list-group-flush" },
+                _vm._l(value, function(voca) {
+                  return _c(
+                    "li",
+                    { key: voca.id, staticClass: "list-group-item" },
+                    [
+                      _c(
+                        "span",
+                        {
+                          on: {
+                            click: function($event) {
+                              return _vm.onSelectWord(voca)
+                            }
+                          }
+                        },
+                        [_vm._v(_vm._s(voca.name))]
+                      )
+                    ]
+                  )
+                }),
+                0
+              )
+            ])
+          }),
+          0
+        ),
+        _vm._v(" "),
+        _c("modal", { attrs: { width: "800", name: "AddWordButton" } }, [
+          _c(
+            "div",
+            {
+              staticClass: "form-add-word",
+              attrs: { slot: "body" },
+              slot: "body"
+            },
+            [
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "form-group col-md-6" }, [
+                  _c("label", [
+                    _vm._v("Word"),
+                    _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
                     directives: [
                       {
                         name: "model",
                         rawName: "v-model",
-                        value: _vm.formDataAddWord.type,
-                        expression: "formDataAddWord.type"
+                        value: _vm.formDataAddWord.name,
+                        expression: "formDataAddWord.name"
                       }
                     ],
                     staticClass: "form-control",
+                    attrs: { type: "text" },
+                    domProps: { value: _vm.formDataAddWord.name },
                     on: {
-                      change: function($event) {
-                        var $$selectedVal = Array.prototype.filter
-                          .call($event.target.options, function(o) {
-                            return o.selected
-                          })
-                          .map(function(o) {
-                            var val = "_value" in o ? o._value : o.value
-                            return val
-                          })
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
                         _vm.$set(
                           _vm.formDataAddWord,
-                          "type",
-                          $event.target.multiple
-                            ? $$selectedVal
-                            : $$selectedVal[0]
+                          "name",
+                          $event.target.value
                         )
                       }
                     }
-                  },
-                  [
-                    _c("option", { attrs: { value: "" } }, [
-                      _vm._v("Select type of word")
-                    ]),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "1" } }, [_vm._v("Verb")]),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "2" } }, [_vm._v("Noun")]),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "3" } }, [
-                      _vm._v("Adjective")
-                    ])
-                  ]
-                )
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "form-group col-md" }, [
-                _c("label", [
-                  _vm._v("Mean"),
-                  _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
+                  })
                 ]),
                 _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.formDataAddWord.mean,
-                      expression: "formDataAddWord.mean"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: { type: "text" },
-                  domProps: { value: _vm.formDataAddWord.mean },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.formDataAddWord, "mean", $event.target.value)
-                    }
-                  }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "form-group col-md" }, [
-                _c("label", [_vm._v("Synonym\n              ")]),
-                _vm._v(" "),
-                _c("input", {
-                  staticClass: "form-control",
-                  attrs: { type: "text", disabled: "" }
-                }),
-                _vm._v(" "),
-                _c("small", [_vm._v("This input will be comming soon")])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "row" }, [
-              _c(
-                "div",
-                { staticClass: "form-group col-md" },
-                [
-                  _c("label", [_vm._v("Description")]),
+                _c("div", { staticClass: "form-group col-md-6" }, [
+                  _c("label", { attrs: { for: "exampleInputEmail1" } }, [
+                    _vm._v("Type"),
+                    _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
+                  ]),
                   _vm._v(" "),
-                  _c("ckeditor", {
-                    attrs: { editor: _vm.editor, config: {} },
-                    model: {
-                      value: _vm.formDataAddWord.description,
-                      callback: function($$v) {
-                        _vm.$set(_vm.formDataAddWord, "description", $$v)
-                      },
-                      expression: "formDataAddWord.description"
+                  _c(
+                    "select",
+                    {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.formDataAddWord.type,
+                          expression: "formDataAddWord.type"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      on: {
+                        change: function($event) {
+                          var $$selectedVal = Array.prototype.filter
+                            .call($event.target.options, function(o) {
+                              return o.selected
+                            })
+                            .map(function(o) {
+                              var val = "_value" in o ? o._value : o.value
+                              return val
+                            })
+                          _vm.$set(
+                            _vm.formDataAddWord,
+                            "type",
+                            $event.target.multiple
+                              ? $$selectedVal
+                              : $$selectedVal[0]
+                          )
+                        }
+                      }
+                    },
+                    [
+                      _c("option", { attrs: { value: "" } }, [
+                        _vm._v("Select type of word")
+                      ]),
+                      _vm._v(" "),
+                      _c("option", { attrs: { value: "1" } }, [_vm._v("Verb")]),
+                      _vm._v(" "),
+                      _c("option", { attrs: { value: "2" } }, [_vm._v("Noun")]),
+                      _vm._v(" "),
+                      _c("option", { attrs: { value: "3" } }, [
+                        _vm._v("Adjective")
+                      ])
+                    ]
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "form-group col-md" }, [
+                  _c("label", [
+                    _vm._v("Mean"),
+                    _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.formDataAddWord.mean,
+                        expression: "formDataAddWord.mean"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: { type: "text" },
+                    domProps: { value: _vm.formDataAddWord.mean },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(
+                          _vm.formDataAddWord,
+                          "mean",
+                          $event.target.value
+                        )
+                      }
                     }
                   })
-                ],
-                1
-              )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "form-group col-md" }, [
+                  _c("label", [_vm._v("Synonym\n                ")]),
+                  _vm._v(" "),
+                  _c("input", {
+                    staticClass: "form-control",
+                    attrs: { type: "text", disabled: "" }
+                  }),
+                  _vm._v(" "),
+                  _c("small", [_vm._v("This input will be comming soon")])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "row" }, [
+                _c(
+                  "div",
+                  { staticClass: "form-group col-md" },
+                  [
+                    _c("label", [_vm._v("Description")]),
+                    _vm._v(" "),
+                    _c("ckeditor", {
+                      attrs: { editor: _vm.editor, config: {} },
+                      model: {
+                        value: _vm.formDataAddWord.description,
+                        callback: function($$v) {
+                          _vm.$set(_vm.formDataAddWord, "description", $$v)
+                        },
+                        expression: "formDataAddWord.description"
+                      }
+                    })
+                  ],
+                  1
+                )
+              ])
+            ]
+          )
+        ])
+      ],
+      1
+    ),
+    _vm._v(" "),
+    _vm.selectedWord
+      ? _c("div", { staticClass: "desciption-vocabulary col-5" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _c("div", { staticClass: "line mt-5" }),
+          _vm._v(" "),
+          _c("div", { staticClass: "content-description" }, [
+            _c("div", { staticClass: "description-word mt-3" }, [
+              _vm._v("\n        " + _vm._s(_vm.selectedWord.name) + "\n      ")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "pronunciation-word" }, [
+              _vm._v("\n        a-b-c-d-e\n      ")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "mean-word" }, [
+              _vm._v("\n        " + _vm._s(_vm.selectedWord.mean) + "\n      ")
             ])
-          ]
-        )
-      ])
-    ],
-    1
-  )
+          ])
+        ])
+      : _vm._e()
+  ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "d-flex" }, [
+      _c("h3", { staticClass: "title" }, [_vm._v("Description")]),
+      _vm._v(" "),
+      _c("i", { staticClass: "fas fa-window-close ml-auto text-danger" })
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -57292,93 +57396,95 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "todoList" }, [
-    _c("div", { staticClass: "header" }, [
-      _c("h3", [_vm._v("My day")]),
-      _vm._v("\n    " + _vm._s(this.now) + "\n  ")
-    ]),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "todo-container mt-5" },
-      [
-        _vm._l(_vm.lstTodo, function(todo, index) {
-          return _c(
+  return _c("div", { staticClass: "page-container" }, [
+    _c("div", { staticClass: "todoList" }, [
+      _c("div", { staticClass: "header" }, [
+        _c("h3", [_vm._v("My day")]),
+        _vm._v("\n      " + _vm._s(this.now) + "\n    ")
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "todo-container mt-5" },
+        [
+          _vm._l(_vm.lstTodo, function(todo, index) {
+            return _c(
+              "div",
+              {
+                key: index,
+                staticClass: "row lst-has-todo",
+                class: { "done-task-row": todo.isDone }
+              },
+              [
+                _c("div", { staticClass: "col-1" }, [
+                  _c("i", {
+                    staticClass: "fas fa-check-circle text-success",
+                    class: todo.isDone ? "fa-check-circle" : "fa-circle-notch",
+                    on: {
+                      click: function($event) {
+                        return _vm.onDoneTask(index)
+                      }
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col" }, [
+                  _c("span", { class: { "done-task": todo.isDone } }, [
+                    _vm._v(_vm._s(todo.content))
+                  ])
+                ])
+              ]
+            )
+          }),
+          _vm._v(" "),
+          _c(
             "div",
             {
-              key: index,
-              staticClass: "row lst-has-todo",
-              class: { "done-task-row": todo.isDone }
+              staticClass: "add-todo-thing row",
+              on: { click: _vm.onClickAddMethod }
             },
             [
               _c("div", { staticClass: "col-1" }, [
                 _c("i", {
-                  staticClass: "fas fa-check-circle text-success",
-                  class: todo.isDone ? "fa-check-circle" : "fa-circle-notch",
-                  on: {
-                    click: function($event) {
-                      return _vm.onDoneTask(index)
-                    }
-                  }
+                  staticClass: "fas",
+                  class: _vm.isEdit ? "fa-circle-notch" : "fa-plus"
                 })
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "col" }, [
-                _c("span", { class: { "done-task": todo.isDone } }, [
-                  _vm._v(_vm._s(todo.content))
-                ])
+                _vm.isEdit
+                  ? _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.inputTodo,
+                          expression: "inputTodo"
+                        }
+                      ],
+                      ref: "inputTodo",
+                      attrs: { placeholder: "Add task" },
+                      domProps: { value: _vm.inputTodo },
+                      on: {
+                        blur: _vm.onBlurAddTodo,
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.inputTodo = $event.target.value
+                        }
+                      }
+                    })
+                  : _vm._e(),
+                _vm._v(" "),
+                !_vm.isEdit ? _c("span", [_vm._v("Add task")]) : _vm._e()
               ])
             ]
           )
-        }),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "add-todo-thing row",
-            on: { click: _vm.onClickAddMethod }
-          },
-          [
-            _c("div", { staticClass: "col-1" }, [
-              _c("i", {
-                staticClass: "fas",
-                class: _vm.isEdit ? "fa-circle-notch" : "fa-plus"
-              })
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col" }, [
-              _vm.isEdit
-                ? _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.inputTodo,
-                        expression: "inputTodo"
-                      }
-                    ],
-                    ref: "inputTodo",
-                    attrs: { placeholder: "Add task" },
-                    domProps: { value: _vm.inputTodo },
-                    on: {
-                      blur: _vm.onBlurAddTodo,
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.inputTodo = $event.target.value
-                      }
-                    }
-                  })
-                : _vm._e(),
-              _vm._v(" "),
-              !_vm.isEdit ? _c("span", [_vm._v("Add task")]) : _vm._e()
-            ])
-          ]
-        )
-      ],
-      2
-    )
+        ],
+        2
+      )
+    ])
   ])
 }
 var staticRenderFns = []

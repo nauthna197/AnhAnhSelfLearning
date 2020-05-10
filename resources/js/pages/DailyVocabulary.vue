@@ -1,7 +1,8 @@
 <template>
-  <div class="daily-vocabulary">
+<div class="container-wrapper row">
+  <div class="daily-vocabulary col">
       <div class="header d-flex">
-      <h3 class="mr-4">My Vocabulary</h3>
+      <h3 class="mr-4 title">My Vocabulary</h3>
       <button @click="onClickAddButton" class="btn float-right btn-success">
         <i class="fas fa-plus"></i>
         Add word
@@ -12,7 +13,7 @@
           <h5 class="title-group-list">{{key}}</h5>
           <ul class="list-group list-group-flush">
             <li class="list-group-item" v-for="voca in value" :key="voca.id">
-              <span>{{voca.name}}</span>
+              <span @click="onSelectWord(voca)">{{voca.name}}</span>
             </li>
           </ul>
       </div>
@@ -57,6 +58,25 @@
           </div>
       </modal>
   </div>
+  <div v-if="selectedWord" class="desciption-vocabulary col-5">
+    <div class="d-flex">
+      <h3 class="title">Description</h3>
+      <i class="fas fa-window-close ml-auto text-danger"></i>
+    </div>
+    <div class="line mt-5"></div>
+    <div class="content-description">
+      <div class="description-word mt-3">
+        {{selectedWord.name}}
+      </div>
+      <div class="pronunciation-word">
+        a-b-c-d-e
+      </div>
+      <div class="mean-word">
+        {{selectedWord.mean}}
+      </div>
+    </div>
+  </div>
+</div>
 </template>
 
 <script>
@@ -77,7 +97,8 @@ export default {
         type:"",
         mean:"",
       },
-      listVocaByDay:{a:'1',b:'3'},
+      listVocaByDay:{},
+      selectedWord:"",
     };
   },
   methods:{
@@ -136,6 +157,10 @@ export default {
       }).catch((error)=>{
         console.log(error);
       });
+    },
+    onSelectWord:function(word){
+      this.selectedWord = word;
+      console.log(word);
     }
   },
   mounted(){
@@ -148,14 +173,52 @@ export default {
 
 @import "../../sass/_variables.scss";
 
+.container-wrapper{
+ margin: 0;
+ padding: 30px;
+ .desciption-vocabulary{
+   font-size: 16px;
+   .content-description{
+     margin: 0;
+     .description-word{
+       font-size: 30px;
+     }
+     .mean-word{
+      margin-top: 10px;
+       margin-bottom: 10px;
+       color: $blue;
+     }
+   }
+  }
+ &>div{
+  -webkit-box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);
+  margin: 10px;
+  border-radius: 3px;
+  background-color: #fff;
+  padding: 20px;
+  .title{
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .line{
+    border-bottom: solid 1px $color-grey-bold;
+  }
+ }
+}
+
+.fa-window-close{
+  font-size: 20px;
+  cursor: pointer;
+}
+
 .daily-vocabulary{
-  padding: 10px;
   .list-item-wrapper{
     .title-group-list{
       text-align: center;
     }
     li{
-      margin-left: 100px;
       text-transform: capitalize;
       span{
         cursor: pointer;

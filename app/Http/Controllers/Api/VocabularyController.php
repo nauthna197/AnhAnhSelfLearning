@@ -19,10 +19,10 @@ class VocabularyController extends Controller
 
     public function get(Request $request)
     {
-        $data = Vocabulary::all();
+        $data = Vocabulary::orderBy('created_at','desc')->get();
         $dataGrouped = $data->groupBy(function($item,$key){
             return $item->created_at->format('d-m-Y');
-        })->sortByDesc('created_at');
+        });
         return ['status' => 1, 'data' => $dataGrouped];
     }
 }

@@ -4,14 +4,13 @@ services:
   #PHP Service
   app:
     image: anhanh:v1
-    restart: unless-stopped
+    user: root
     volumes:
       - ./:/var/www/html
 
   #Nginx Service
   webserver:
     image: nginx:1.17-alpine
-    restart: unless-stopped
     ports:
       - "9000:80"
     volumes:
