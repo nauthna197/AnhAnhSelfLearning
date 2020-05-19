@@ -1,7 +1,7 @@
 export default class BaseRequest {
   async get(url, params = {}) {
     try {
-      const response = await window.axios.get(url, { params });
+      const response = await window.axios.get(url,  {params} );
       return this._responseHandler(response);
     } catch (error) {
       this._errorHandler(error);

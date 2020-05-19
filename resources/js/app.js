@@ -4,23 +4,27 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+require("./bootstrap");
 
-window.Vue = require('vue');
+window.Vue = require("vue");
 
-import VueRouter from 'vue-router'
+import VueRouter from "vue-router";
 import routes from "./routes.js";
 import VueBroadCast from "./VueBroadcast";
-import CKEditor from '@ckeditor/ckeditor5-vue';
-import Toasted from 'vue-toasted';
-import _ from 'lodash';
-    
-    
+import CKEditor from "@ckeditor/ckeditor5-vue";
+import Toasted from "vue-toasted";
+import _ from "lodash";
+import "ant-design-vue/dist/antd.css";
+import { Tabs,Icon,Radio } from "ant-design-vue";
 
 const router = new VueRouter({
-    mode: 'history',    
-    routes  
-})
+    mode: "history",
+    routes
+});
+
+Vue.use(Tabs);
+Vue.use(Icon);
+Vue.use(Radio);
 
 /**
  * The following block of code may be used to automatically register your
@@ -33,12 +37,16 @@ const router = new VueRouter({
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('app',require('./App.vue').default);
+Vue.component("app", require("./App.vue").default);
 
 Vue.use(VueRouter);
 Vue.use(VueBroadCast);
-Vue.use(CKEditor)
-Vue.use(Toasted,{position:'bottom-right',duration:5000,fitToScreen:true})
+Vue.use(CKEditor);
+Vue.use(Toasted, {
+    position: "bottom-right",
+    duration: 5000,
+    fitToScreen: true
+});
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -47,6 +55,6 @@ Vue.use(Toasted,{position:'bottom-right',duration:5000,fitToScreen:true})
  */
 
 window.app = new Vue({
-    el: '#app',
+    el: "#app",
     router
 });

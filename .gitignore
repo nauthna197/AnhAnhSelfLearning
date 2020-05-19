@@ -4,8 +4,9 @@
 /storage/*.key
 /vendor
 /mysql
-/public/css
-/public/js
+/public/css/*
+/public/js/*
+/.idea/*
 .env
 .env.backup
 .phpunit.result.cache

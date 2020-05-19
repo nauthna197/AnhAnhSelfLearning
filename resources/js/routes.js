@@ -1,7 +1,7 @@
 import Welcome from "./pages/Welcome";
 import Login from "./pages/Login";
 import TodoList from "./pages/TodoList";
-import DailyVocabulary from "./pages/DailyVocabulary"
+import DailyVocabulary from "./pages/DailyVocabulary/DailyVocabulary"
 
 export default [
     { path: "/login", name: "login", component: Login },

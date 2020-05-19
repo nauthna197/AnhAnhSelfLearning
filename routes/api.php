@@ -20,4 +20,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('vocabulary/create','Api\VocabularyController@store');
 
+Route::get('vocabulary/get-group-by-date','Api\VocabularyController@getGroupByDate');
+
+Route::get('vocabulary/service-search','Api\VocabularyController@searchFromGoogle');
+
 Route::get('vocabulary/get','Api\VocabularyController@get');
